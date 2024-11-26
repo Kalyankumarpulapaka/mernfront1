@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Feedback Container */
+.feedback-container {
+    max-width: 800px; /* Limit the maximum width for better readability */
+    margin: 0 auto; /* Center the feedback section */
+    padding: 20px; /* Padding for the section */
+}
+
+/* Score Box Styles */
+.score-box {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease; /* Animation for score box */
+}
+
+/* Download Button */
+.download-btn {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: #007BFF;
+    font-weight: bold;
+    border-radius: 10px;
+    color: aliceblue;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Download Button */
+.download-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Change border color to match */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+
+/* Section Divider */
+.section-divider {
+    height: 3px; /* Height of the divider */
+    background-color: #007BFF; /* Color for the divider */
+    margin: 20px 0; /* Space above and below the divider */
+}
+
+/* Feedback Items Styles */
+.feedback-items {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Allow items to stretch to full width */
+    width: 100%; /* Full width */
+}
+
+/* Feedback Card Styles */
+.feedback-card {
+    border: 2px solid #ddd; /* Light gray border for feedback items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px; /* Padding for a larger box */
+    margin: 10px 0; /* Margin between feedback items */
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Hover Effect for Feedback Card */
+.feedback-card:hover {
+    background-color: #007bff1a; /* Slightly darker background on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* User Answer Style */
+.user-answer {
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Correct Answer Style */
+.correct-answer {
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Improvement Area and Explanation Text */
+.improvement-area,
+.explanation-text {
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .score-box {
+        font-size: 1em; /* Increase font size for smaller screens */
+    }
+
+    .feedback-card {
+        font-size: 0.9em; /* Slightly smaller font size */
+    }
+    h4 {
+        font-size: 1.1em !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback-container {
+        max-width: 95%;
+        padding: 10px; /* Reduced padding for small screens */
+    }
+
+    .score-box {
+        font-size: 1em; /* Smaller font size for small screens */
+    }
+
+    .feedback-card {
+        font-size: 0.8em; /* Smaller font size */
+    }
+}
+
+/* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Question Title Styles */
+.question-title {
+    font-size: 1em !important; /* Adjust the size as needed */
+    margin-bottom: 10px; /* Optional: space below the question */
+}
+
+/* Responsive Adjustment for Small Screens */
+@media (max-width: 768px) {
+    .question-title {
+        font-size: 1em; /* Decrease font size further on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .question-title {
+        font-size: 0.9em; /* Even smaller font size for very small screens */
+    }
+}

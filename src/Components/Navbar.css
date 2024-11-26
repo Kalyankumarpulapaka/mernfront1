@@ -1,0 +1,40 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space out the brand and button */
+  align-items: center;
+  padding: 20px !important;
+  background-color: rgb(94, 87, 170);
+  color: white;
+  width: 100%; /* Ensures the navbar takes up the full width */
+  position: fixed; /* Keeps navbar fixed at the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Brand styling */
+.navbar__brand {
+  font-size: 1.5rem; /* Larger font size for better visibility */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Optional: Add some spacing below the navbar if needed */
+body {
+  margin-top: 70px; /* Adjust this based on the height of your navbar */
+}

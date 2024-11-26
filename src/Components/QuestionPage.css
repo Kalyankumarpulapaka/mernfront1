@@ -1,0 +1,332 @@
+/* Define CSS Variables for consistency and easier maintenance */
+:root {
+    --primary-color:  #3268cd ;;
+    --secondary-color:  #6D9BF1 ;;
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --error-color: rgba(207, 6, 6, 0.723);
+    --success-color: rgba(52, 191, 52, 0.685);
+    --border-radius: 10px;
+    --font-size-large: 1em;
+    --font-size-medium: 1em;
+    --font-size-small: 0.7em;
+    --line-height: 1.4; /* Improved line height for readability */
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Arial', sans-serif; /* Use a clean sans-serif font */
+    background-color: var(--bg-color); /* Soft background color */
+    color: var(--text-color); /* Standard text color */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+  }
+  
+  /* Question Page Container */
+  .question-page {
+    border: 1px solid rgb(202, 201, 201);
+    max-width: 680px!important; /* Limit the max width */
+    margin: 40px auto; /* Center with margin at the top */
+    padding: 20px !important; /* Padding inside the container */
+    background-color: white; /* White background for contrast */
+    border-radius: var(--border-radius); /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Title Styles */
+  h2 {
+    text-align: center; /* Center the title */
+    font-weight: 500;
+    font-size: 1.4em !important;
+    color: var(--primary-color); /* Blue color for the title */
+    margin-bottom: 20px; /* Space below title */
+  }
+  
+  /* Question Text Styles */
+  .question-text {
+    font-weight: bold;
+    font-size: var(--font-size-large); /* Slightly larger font for questions */
+    line-height: var(--line-height); /* Improved readability */
+    margin-bottom: 15px; /* Space below the question */
+  }
+  
+  /* Options Container */
+  .options-container {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack options vertically */
+    margin-bottom: 20px; /* Space below options */
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* Option Button Styles */
+  .option-button {
+    padding: 10px !important; /* Padding for button-like options */
+    border: 1px solid #ddd; /* Border for buttons */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between options */
+    background-color: #f7f9fc; /* Light gray background */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: start; /* Align text to start */
+    transition: background-color 0.1s ease, border-color 0.1s ease; /* Smooth transition */
+    font-size: var(--font-size-medium); /* Base font size */
+  }
+  
+  /* Accessibility: Focus style for keyboard navigation */
+  .option-button:focus {
+    outline: 3px solid var(--primary-color);
+  }
+  
+  .option-button:hover {
+    background-color:   #6D9BF1; /* Light cyan on hover */
+    border-color: var(--secondary-color); /* Darker border color on hover */
+  }
+  
+  .option-button.selected {
+    background-color:  #5a8ff4; /* Cyan background when selected */
+    color: white; /* White text when selected */
+  }
+  
+  /* Button Group Styles */
+  .button-group {
+    display: flex; /* Flex layout for buttons */
+    justify-content: space-between; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    margin-top: 20px; /* Space above buttons */
+  }
+  
+  /* Button Styles */
+  .next-btn, .submit-btn {
+    padding: 10px 20px; /* Padding for buttons */
+    border: none; /* No border */
+    border-radius: var(--border-radius); /* Rounded corners */
+    background-color: var(--primary-color); /* Blue background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  /* Accessibility: Focus style for buttons */
+  .next-btn:focus, .submit-btn:focus {
+    outline: 2px solid #0056b3; /* Darker blue outline on focus */
+  }
+  
+  .next-btn:hover, .submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Error Message Styles */
+  .error-message {
+    color: var(--error-color); /* Red text for error messages */
+    text-align: center; /* Center the error message */
+    margin-top: 10px; /* Space above error messages */
+  }
+  
+/*loding */
+
+/* Loading Styles */
+.loading-container {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+/* Multi-Color Loader */
+.loader {
+    border: 8px solid transparent; /* Transparent border */
+    border-top: 8px solid #ff5733; /* Top border - Orange */
+    border-right: 8px solid #33ff57; /* Right border - Green */
+    border-bottom: 8px solid #3357ff; /* Bottom border - Blue */
+    border-left: 8px solid #ff33e7; /* Left border - Pink */
+    border-radius: 80%; /* Circular loader */
+    width: 60px; /* Larger size for a more noticeable loader */
+    height: 60px;
+    animation: spin 1.2s ease-in-out infinite, colorChange 4s ease-in-out infinite; /* Spin and color animation */
+}
+
+/* Spin Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Color change animation for more vibrancy */
+@keyframes colorChange {
+    0% {
+        border-top-color: #ff552f;
+        border-right-color: #f5c867;
+        border-bottom-color: #4ef3fe;
+        border-left-color: hsl(99, 84%, 68%);
+    }
+    25% {
+        border-top-color: #33ff57;
+        border-right-color: #3357ff;
+        border-bottom-color: #ff33e7;
+        border-left-color: #ff5733;
+    }
+    50% {
+        border-top-color: #3357ff;
+        border-right-color: #ff33e7;
+        border-bottom-color: #ff5733;
+        border-left-color: #33ff57;
+    }
+    75% {
+        border-top-color: #ff33e7;
+        border-right-color: #ff5733;
+        border-bottom-color: #33ff57;
+        border-left-color: #3357ff;
+    }
+    100% {
+        border-top-color: #ff5733;
+        border-right-color: #33ff57;
+        border-bottom-color: #3357ff;
+        border-left-color: #ff33e7;
+    }
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Question Title Styles */
+  .question-title {
+    font-weight: bold; /* Bold for question titles */
+    font-size: 1.3em; /* Slightly larger font for question titles */
+    color: var(--text-color); /* Dark color for question titles */
+    margin-bottom: 10px; /* Space below question title */
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+  
+  
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between; /* Adjusts the spacing between buttons */
+    margin-top: 20px; /* Space above buttons */
+  }
+  
+  .forward-btn, .next-btn, .submit-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .forward-btn {
+    background-color: #007bff; /* Blue background for Forward button */
+    color: white;
+  }
+  
+  .next-btn {
+    background-color: #28a745; /* Green background for Next button */
+    color: white;
+  }
+  
+  .submit-btn {
+    background-color: #dc3545; /* Red background for Submit button */
+    color: white;
+  }
+  
+  .forward-btn:disabled, .next-btn:disabled, .submit-btn:disabled {
+    background-color: #cccccc; /* Grey background for disabled buttons */
+    cursor: not-allowed; /* Not-allowed cursor for disabled buttons */
+  }
+  
+  /*pagination*/
+  
+  .pagination {
+    display: flex;
+    justify-content: center; /* Center the pagination */
+    margin-top: 20px; /* Space above pagination */
+  }
+  
+  .page-button {
+    padding: 8px 12px;
+    margin: 0 5px; /* Space between buttons */
+    border: none;
+    border-radius: 4px;
+    background-color: #6D9BF1 ; /* Default button color */
+    color: white;
+    cursor: pointer;
+  }
+  
+  .page-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .page-button.active {
+    background-color: #28a745; /* Highlight the active page button */
+  }
+  
+  
+  /* Media Queries for Tablet and Mobile Responsiveness */
+  
+  /* For devices up to 768px (tablets) */
+  @media (max-width: 768px) {
+    .question-page {
+      max-width: 90%;
+      padding: 20px !important; /* Slightly reduced padding for tablets */
+    }
+  
+    .question-title {
+      font-size: 1.4em; /* Adjust title font size for tablets */
+    }
+  
+    .question-text {
+      font-size: var(--font-size-medium); /* Adjust question text size */
+    }
+  
+    .option-button, .next-btn, .submit-btn {
+      font-size: var(--font-size-small); /* Smaller font size */
+      padding: 12px; /* Adjust padding for buttons */
+    }
+  
+  
+  
+    h2 {
+      font-size: 1.6em; /* Adjusted title size for better fit */
+    }
+  
+    
+    
+  }
+  
+  /* For devices up to 600px (mobile phones) */
+  @media (max-width: 600px) {
+    .question-page {
+      max-width: 90%;
+      padding: 20px !important; /* Adjusted padding for mobile */
+    }
+  
+  
+    .option-button, .next-btn, .submit-btn {
+      font-size: 0.9em; /* Smaller font size on mobile */
+      padding: 10px; /* Adjust padding for smaller buttons */
+    }
+  
+    .question-page{
+      max-width: 90%;
+    }
+    .question-text {
+      font-size: 1em!important; 
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+      font-weight: bold;
+    }
+    
+    h2 {
+      font-size: 1.2em !important; /* Title size adjustment for mobile */
+    }
+  
+   
+  }

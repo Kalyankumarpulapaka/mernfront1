@@ -1,0 +1,289 @@
+/* General body styling */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Or any other font you prefer */
+  background-color: #FFFFFF !important;
+  color: #333;
+}
+
+/* Container for the entire landing page */
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.own {
+  background-image: url('/public/ad.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1; /* Allow the left side to take available space */
+}
+
+.own1 {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Styling for the form */
+.landing-form {
+  border-radius: 10px;
+  padding: 22px !important; /* Reduced padding */
+  box-shadow: 0 4px 30px rgba(5, 5, 5, 0.137); /* Slightly deeper shadow for depth */
+  width: 100% !important;
+  max-width: 400px !important; /* Reduced max width for a smaller form */
+  display: flex;
+  font-family: monospace;
+  margin-top: 40px;
+  flex-direction: column;
+  border-right: 2px solid rgba(19, 87, 214, 0.905);
+  align-items: center; 
+  background-image: linear-gradient(to right, #6D9BF1,  #a6c0ee) !important;
+
+  margin-bottom: 20px !important;
+}
+
+/* Other styles remain unchanged */
+
+.brand {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Modern input styles */
+input,
+select,
+.start-btn {
+  width: 100%;
+  padding: 10px; /* Reduced padding for a sleeker look */
+  margin: 10px 0;
+  border: 1px solid rgb(198, 195, 195); /* Lighter border */
+  border-radius: 5px; /* Rounded edges */
+  font-size: 13px;
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Styling for text, number inputs, and select dropdown */
+input[type="text"],
+input[type="number"],
+select {
+  background: white; /* Slightly darker grey background for inputs */
+  color: #090909;
+}
+
+/* Focus effects for inputs and dropdown */
+input:focus,
+select:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Subtle glow effect */
+}
+
+/* Styling for the button */
+.start-btn {
+  background: rgb(46, 52, 100); /* More vibrant orange button */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s; /* Transition effect */
+  font-weight: 600;
+}
+
+.start-btn:hover {
+  background: #4abd03; /* Darker orange on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Adjust form responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .landing-form {
+    width: 100%;
+    max-width: 100% !important; /* Use full width on smaller screens */
+    margin-top: 20px; /* Add spacing to the top */
+  }
+
+  .container-fluid {
+    padding: 0 10px; /* Reduce padding for mobile */
+  }
+
+  .col-12 {
+    margin-bottom: 20px; /* Add space between stacked columns */
+  }
+
+  .own {
+    background-image: url('/public/ad.png') !important; /* Keep the background image */
+    background-size: contain; /* Adjust background size for better visibility */
+    background-repeat: no-repeat; /* Maintain no-repeat */
+    height: auto; /* Set height to auto for responsive behavior */
+    margin-top: 20px !important;
+  }
+}
+
+
+
+.own1 {
+  display: flex;
+  justify-content: flex-end; /* Align form to the right */
+  align-items: center; /* Center the form vertically */
+  height: 100%; /* Ensure it takes the full height of the row */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+ 
+ .landing-form {
+
+  width: 100% !important;
+  max-width: 300px!important; /* Reduced max width for a smaller form */
+  display: flex;
+
+}
+
+  .own {
+    height: 300px; /* Set a fixed height for consistency */
+    margin-top: 20px !important;
+  }
+}
+
+.line {
+  border-bottom: 3px solid rgb(46, 52, 100);
+}
+
+input::placeholder {
+  color: #aaa; /* Change to a visible color */
+  opacity: 1; /* Make sure opacity is set to 1 */
+}
+
+.error-message {
+  color: #d9534f; /* Bootstrap danger color */
+  background-color: #f2dede; /* Light red background */
+  border: 1px solid #ebccd1; /* Red border */
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-small;
+}
+
+
+.sec1 {
+  height: 100px;
+  text-align: center;
+  padding: 10px;
+  background-image: linear-gradient(to right, #6D9BF1,  #a6c0ee) !important;
+  color: white;
+}
+
+
+/*tezt color*/
+.gradient-border {
+  font-size: 30px;
+  text-align: center;
+  padding: 15px !important;
+  color: white !important;
+  font-weight: 600;
+  
+  background: linear-gradient(to right, #f95656, #a469fc, #4988fd) !important; /* Light Coral, Soft Purple, Soft Blue */
+  -webkit-background-clip: text;
+  color: white;
+  
+}
+
+/* Text Color with Gradient Borders */
+.gradient-borders {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  
+  /* Create gradient background */
+  background: linear-gradient(to right, #6D9BF1, white);
+  
+  /* Apply gradient to the text */
+  -webkit-background-clip: text;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  
+  /* Add gradient border */
+  border: 4px solid;
+  border-image: linear-gradient(to right, white, white) 1;
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .gradient-borders {
+    font-size: 20px; /* Adjust font size for tablets */
+    padding: 15px; /* Adjust padding for better fit */
+    border-width: 3px; /* Thinner border */
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .gradient-borders {
+    font-size: 18px; /* Smaller font size for mobile */
+    padding: 10px; /* Reduce padding for mobile */
+    border-width: 2px; /* Even thinner border for smaller screens */
+    background: linear-gradient(to right, #6D9BF1, #a5c3fb); /* Slightly adjusted gradient */
+  }
+}
+
+/* Text Color with Gradient Borders */
+.gradient-border {
+  font-size: 30px;
+  text-align: center;
+  padding: 15px !important;
+  color: white !important;
+  font-weight: 600;
+  
+  /* Create gradient background */
+  background: linear-gradient(to right, #6D9BF1, white);
+  
+  /* Apply gradient to the text */
+  -webkit-background-clip: text;
+  color: white;
+  
+  /* Add gradient border */
+  border: 4px solid;
+  border-image: linear-gradient(to right, white, white) 1;
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .gradient-border {
+    font-size: 24px; /* Adjust font size for tablets */
+    padding: 12px !important; /* Adjust padding for tablets */
+    border-width: 3px; /* Adjust border width for tablets */
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .gradient-border {
+    font-size: 18px; /* Smaller font size for mobile */
+    padding: 10px !important; /* Reduce padding for mobile */
+    border-width: 2px; /* Adjust border width for mobile */
+    background: linear-gradient(to right, #ff7474, #ba8cff, #6094f4); /* Light Coral, Soft Purple, Soft Blue */
+  }
+}
+
+
+
+
+
+
+
+
+
